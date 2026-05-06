@@ -1,26 +1,31 @@
 # 🖼️ Traitement d'Image — Pipeline OpenCV
 
-Pipeline complet de traitement d'image en Python avec OpenCV, incluant filtrage, morphologie, détection de contours et segmentation. Projet académique réalisé dans le cadre d'un cursus en Intelligence Artificielle & Systèmes Embarqués.
+Pipeline complet de traitement d'image en Python avec OpenCV : filtrage, morphologie, détection de contours et segmentation sur image réelle ou de démonstration.
 
-## 📌 Fonctionnalités
+## 📸 Aperçu
+
+![Pipeline Traitement Image](docs/screenshot_traitement.png)
+
+## 🎯 Fonctionnalités
 
 | Technique | Description |
 |-----------|-------------|
-| Seuillage adaptatif | Binarisation locale (Gaussian + Mean) |
-| Filtrage Gaussien | Lissage par convolution gaussienne |
-| Filtrage Médian | Réduction du bruit impulsionnel |
-| Détection Canny | Extraction des contours par gradient |
-| Morphologie | Érosion, dilatation, ouverture, fermeture |
+| Seuillage adaptatif | Binarisation locale Gaussian & Mean |
+| Filtrage Gaussien | Lissage par convolution |
+| Filtrage Médian | Réduction bruit impulsionnel |
+| Détection Canny | Extraction contours par gradient |
+| Érosion / Dilatation | Morphologie mathématique |
+| Ouverture / Fermeture | Opérations morphologiques combinées |
 | Détection de formes | Contours + bounding boxes annotés |
-| Pipeline complet | Enchaînement automatique de toutes les étapes |
 
-## 🗂️ Structure du projet
+## 🗂️ Structure
 
 ```
 traitement-image-opencv/
 ├── traitement_image.py   # Script principal
-├── README.md
-└── images/               # (optionnel) images de test
+├── docs/
+│   └── screenshot_traitement.png
+└── README.md
 ```
 
 ## ⚙️ Installation
@@ -31,32 +36,16 @@ pip install opencv-python numpy matplotlib
 
 ## 🚀 Utilisation
 
-### Avec une image existante
 ```bash
-python traitement_image.py --image chemin/vers/image.jpg
+# Avec image de démonstration (générée automatiquement)
+python traitement_image.py
+
+# Avec votre propre image
+python traitement_image.py mon_image.jpg
+
+# Sans affichage fenêtre (génère un PNG)
+python traitement_image.py --no-display
 ```
-
-### Avec l'image de démonstration (générée automatiquement)
-```bash
-python traitement_image.py --demo
-```
-
-### Afficher toutes les étapes du pipeline
-```bash
-python traitement_image.py --demo --pipeline
-```
-
-## 📊 Résultats
-
-Le script génère une grille de visualisation 2×4 avec :
-- Image originale en niveaux de gris
-- Seuillage adaptatif Gaussian
-- Seuillage adaptatif Mean
-- Filtrage Gaussien (σ=1)
-- Filtrage Médian (k=5)
-- Détection de contours Canny
-- Opérations morphologiques (érosion / dilatation)
-- Détection et annotation des formes
 
 ## 🧠 Concepts couverts
 
@@ -64,17 +53,11 @@ Le script génère une grille de visualisation 2×4 avec :
 - Morphologie mathématique (éléments structurants)
 - Détection de contours (opérateur de Canny)
 - Segmentation par seuillage adaptatif
-- Visualisation et annotation avec OpenCV & Matplotlib
 
 ## 🛠️ Technologies
 
-- **Python 3.x**
-- **OpenCV** (`cv2`) — traitement d'image
-- **NumPy** — calculs matriciels
-- **Matplotlib** — visualisation
+**Python 3** · **OpenCV** · **NumPy** · **Matplotlib**
 
 ## 👩‍💻 Auteure
 
-**Vanelle Stéphanie MANGOUA DJOUSSEU**  
-Étudiante en IA & Systèmes Embarqués — Recherche d'alternance  
-[LinkedIn](https://linkedin.com/in/vanelle-mangoua) · [GitHub](https://github.com/vanellemangoua)
+**Vanelle Stéphanie MANGOUA DJOUSSEU** — Recherche d'alternance en IA & Systèmes Embarqués
